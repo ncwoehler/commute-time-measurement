@@ -18,8 +18,8 @@ spring.h2.console:
 server.port: 16789
 
 # Job
-jobs.collect.morning.cron: "0 */10 7-10 * * *"
-jobs.collect.afternoon.cron: "0 */10 15-19 * * *"
+jobs.collect.morning.cron: "0 */15 7-10 * * MON-FRI"
+jobs.collect.afternoon.cron: "0 */15 16-19 * * MON-FRI"
 
 # Google API
 google.api.key: ${API_KEY}
