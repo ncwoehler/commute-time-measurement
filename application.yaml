@@ -1,0 +1,9 @@
+# Home destinations
+jobs.collect.home:
+  - "Bochum"
+  - "Essen"
+
+# Work destination
+jobs.collect.work:
+  - "Zalando, Dortmund"
+  - "Essen Steele"
