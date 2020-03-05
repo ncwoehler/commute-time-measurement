@@ -16,6 +16,14 @@ repositories {
 	mavenCentral()
 }
 
+val developmentOnly = configurations.create("developmentOnly")
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom(developmentOnly)
+	}
+}
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
@@ -26,6 +34,12 @@ dependencies {
 
 	implementation("com.h2database:h2:1.4.199")
 	implementation("io.github.microutils:kotlin-logging:1.7.8")
+
+	// Thymeleaf for UI
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	implementation("org.webjars:bootstrap:4.4.1-1")
+	implementation("org.webjars:jquery:3.4.1")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")

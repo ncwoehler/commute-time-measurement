@@ -21,3 +21,9 @@ data class DistanceMeasurement(
     @CreationTimestamp
     val createdAt: Instant? = null
 )
+
+data class GroupedQueryResult(
+    val traffic: Number,
+    val origin: String,
+    val destination: String
+)

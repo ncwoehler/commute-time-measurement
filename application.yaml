@@ -1,9 +1,26 @@
+spring.h2.console.settings.web-allow-others: true
+
+google.api.key: ...
+
 # Home destinations
 jobs.collect.home:
-  - "Bochum"
-  - "Essen"
+  - "Stadtgartenring 22, Bochum"
+  - "Rüsternhagen 5, Bochum"
+  - "Am Isinger Bach 6, Essen"
+  - "Reuenthalweg 50, 45279 Essen"
+  - "Falterweg 44, Essen"
+  - "Rauhhölterberg 17, 45276 Essen"
+  - "Seminarstraße 18, 45138 Essen"
+  - "Robert-Schmidt-Straße 10, 45138 Essen"
+  - "Adelgundenweg 27, 45136 Essen"
+  - "Schulte-Hordelhoff-Straße 17, 44866 Bochum"
+  - "Krockhausstraße 19, 44797 Bochum"
+  - "Im Ostholz 164, 44879 Bochum"
+  - "In der Mark 30, 44869 Bochum"
+  - "Plaßhofstraße 43, 44795 Bochum"
+  - "Eligiushöhe 2, Essen"
 
 # Work destination
 jobs.collect.work:
   - "Zalando, Dortmund"
-  - "Essen Steele"
+  - "Pinxtenweg 6, Essen"
