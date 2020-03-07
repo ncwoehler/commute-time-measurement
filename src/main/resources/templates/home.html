@@ -23,17 +23,17 @@
             <thead>
             <tr>
                 <th scope="col">
-                    Destinations
+                    Home addresses
                 </th>
-                <th>Average Traffic Morning</th>
-                <th>Average Traffic Evening</th>
+                <th>Commute To Work (Min/Avg/Max)</th>
+                <th>Commute From Work (Min/Avg/Max)</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="result: ${results}">
-                <td th:text="${result.destination}"></td>
-                <td th:text="${result.morning}"></td>
-                <td th:text="${result.afternoon}"></td>
+                <td th:text="${result.homeAddress}"></td>
+                <td><span th:text="${result.toWork.min}"/> / <span th:text="${result.toWork.average}"/> / <span th:text="${result.toWork.max}"/> / <span th:text="${result.toWork.distance}"/>km</td>
+                <td><span th:text="${result.fromWork.min}"/> / <span th:text="${result.fromWork.average}"/> / <span th:text="${result.fromWork.max}"/> / <span th:text="${result.fromWork.distance}"/>km</td>
             </tr>
             </tbody>
         </table>
