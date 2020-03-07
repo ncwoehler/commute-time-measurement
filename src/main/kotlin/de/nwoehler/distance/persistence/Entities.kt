@@ -23,7 +23,11 @@ data class DistanceMeasurement(
 )
 
 data class GroupedQueryResult(
-    val traffic: Number,
+    val avgTraffic: Number,
+    val maxTraffic: Number,
+    val minTraffic: Number,
+    val avgDistance: Number,
+    val count: Long,
     val origin: String,
     val destination: String
 )

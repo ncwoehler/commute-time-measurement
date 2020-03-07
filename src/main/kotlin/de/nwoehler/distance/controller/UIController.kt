@@ -1,7 +1,5 @@
 package de.nwoehler.distance.controller
 
-import de.nwoehler.distance.config.CommuteJobConfig
-import de.nwoehler.distance.persistence.DistanceMeasurementRepository
 import de.nwoehler.distance.service.ResultService
 import mu.KotlinLogging
 import org.springframework.stereotype.Controller
@@ -17,7 +15,7 @@ class UIController(
 
     @GetMapping("/ui/home")
     fun main(model: Model): String? {
-        val results = resultService.getDestinationsWithAverageTime().sortedBy { it.morning }
+        val results = resultService.getHomesWithAggregatedCommuteTimes().sortedBy { it.toWork?.average }
         model.addAttribute("results", results)
         return "home"
     }
